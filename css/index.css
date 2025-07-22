@@ -45,85 +45,40 @@ body{
     height: 100%;
 }
 
-.login_box .g_id_signin{
-    width: 20vw !important;
-    display: flex;
-    justify-content: center;
-}
-
-.login_box .g_id_signin div{
-    width: 20vw !important;
-    display: flex;
-    justify-content: center;
-}
-
 .login_box h2{
     font-size: 2.2vw;
 }
 
-.login_box div{
+.signin_box {
+    width: 20vw;
     height: 7vw;
-    width: min-content !important;
-    display: flex;
-    align-items: center;
-}
-
-.login_box .g_id_signin div div div div div{
-    width: 1.8vw !important;
-    height: 1.8vw !important;
-}
-
-.login_box div *{
-    height:100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 0;
-    -webkit-flex-grow: 0;
-}
-
-.login_box svg{
-    height: 100%;
-    width: 100%;
-}
-
-.login_box span{
-    flex-grow: 0;
-    -webkit-flex-grow: 0;
-    font-size: 1.7vw;
-    height: min-content;
-    width: min-content;
-}
-
-.box{
-    background-color: #FFFFFFC3;
-    border-radius: 3vw;
-    width: 35%;
-    min-height: 0;
-    aspect-ratio: 1.25;
-}
-
-.box_inner{
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.box img{
-    position:absolute;
-    height: 35%;
-    aspect-ratio: 1;
+    border-radius: 1vw;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
 }
 
-button {
-    width: 5vw;
-    height: 1vw;
+.signin_box *{
+    cursor:pointer;
+}
+
+.signin_box_inner {
+    width: 19.5vw;
+    height: 6.5vw;
+    border-radius: 0.75vw;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+#google_logo {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.signin_box span{
+    font-size: 1.5vw;
 }
