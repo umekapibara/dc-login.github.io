@@ -1,0 +1,33 @@
+.box_inner{
+    animation: 5s linear 0ms infinite normal none running rotation;
+    -webkit-animation: 5s linear 0ms infinite normal none running rotation;
+}
+
+.load_1{
+    animation: 1500ms ease-in-out 0ms infinite normal none running rotation;
+    rotate: 45deg;
+    -webkit-animation: 1500ms ease-in-out 0ms infinite normal none running rotation;
+}
+
+.load_2{
+    animation: 1500ms ease-in-out 120ms infinite normal none running rotation;
+    rotate: -15deg;
+    -webkit-animation: 1500ms ease-in-out 120ms infinite normal none running rotation;
+}
+
+.load_3{
+    animation: 1500ms ease-in-out 240ms infinite normal none running rotation;
+    rotate: -30deg;
+    -webkit-animation: 1500ms ease-in-out 240ms infinite normal none running rotation;
+}
+
+.load_4{
+    animation: 1500ms ease-in-out 360ms infinite normal none running rotation;
+    rotate: -45deg;
+    -webkit-animation: 1500ms ease-in-out 360ms infinite normal none running rotation;
+}
+
+@keyframes rotation {
+    0%{ transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+    100% { transform: rotate(360deg); -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); }
+}
