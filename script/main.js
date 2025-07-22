@@ -52,47 +52,25 @@ function get_grade(email){
     return grade;
 }
 
-function handleCredentialResponse(response) {
-    document.body.innerHTML = `<div class="box">
-        <div class="box_inner">
-            <img class="load_1" src="data:image/png;base64,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" alt="">
-            <img class="load_2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoAQMAAAB3bUanAAAABlBMVEUAAAA+Pj4LNneDAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAATOUAAEzlAXXO8JUAAAH1SURBVHic7dsxbttAEIZRCypY8gg8Co9GHU1H4RFSpgjCxLJC7dYC9g887/XGBwjUUiZnPj7eMR8/3vr7t1yO47jF6svf+s9Y/fiUik+P+h6qL4966qPfHvXfmfjl+HKL1KdnfY/U52c9c+Csz/qvSH171iOX3b+LLnPZXc/6PVCfzvoeqM9nPXHRL2c9cdauZz3xldvOeuIrd7yMj1+a+m14/drU78PrU1Pfh9fnpj7+C5+tL019/HGzNvXxx022vjX18Yfd0apVv3T1W6n6tavfS9Wnrr6Xqs9dffRtpnJ96eqjb7GV62tXH32DV0/Vt64++qeVes360VNXV1dXV1f/BvWti9f6baOeqq9dvdb/cZXrS1ev9dwmW6/8rDJbr/x8vvJ7mcrv4yq/hw2/AV+berXZg6Wpj5/6qDxvk510yk55ZSfcstN94cnG13GTmOp8HTeJidbsNG92kjk7xZ2dYM9O74c3F7JbG9mNley2TnZTKbylld1Qy27nhTcTs1uZ2Y1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+G38AlPd71BlNunQAAAAASUVORK5CYII=" alt="">
-            <img class="load_3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoAQMAAAB3bUanAAAABlBMVEUAAAA+Pj4LNneDAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAATOUAAEzlAXXO8JUAAAH1SURBVHic7dsxbttAEIZRCypY8gg8Co9GHU1H4RFSpgjCxLJC7dYC9g887/XGBwjUUiZnPj7eMR8/3vr7t1yO47jF6svf+s9Y/fiUik+P+h6qL4966qPfHvXfmfjl+HKL1KdnfY/U52c9c+Csz/qvSH171iOX3b+LLnPZXc/6PVCfzvoeqM9nPXHRL2c9cdauZz3xldvOeuIrd7yMj1+a+m14/drU78PrU1Pfh9fnpj7+C5+tL019/HGzNvXxx022vjX18Yfd0apVv3T1W6n6tavfS9Wnrr6Xqs9dffRtpnJ96eqjb7GV62tXH32DV0/Vt64++qeVes360VNXV1dXV1f/BvWti9f6baOeqq9dvdb/cZXrS1ev9dwmW6/8rDJbr/x8vvJ7mcrv4yq/hw2/AV+berXZg6Wpj5/6qDxvk510yk55ZSfcstN94cnG13GTmOp8HTeJidbsNG92kjk7xZ2dYM9O74c3F7JbG9mNley2TnZTKbylld1Qy27nhTcTs1uZ2Y1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+G38AlPd71BlNunQAAAAASUVORK5CYII=" alt="">
-            <img class="load_4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoAQMAAAB3bUanAAAABlBMVEUAAAA+Pj4LNneDAAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAATOUAAEzlAXXO8JUAAAH1SURBVHic7dsxbttAEIZRCypY8gg8Co9GHU1H4RFSpgjCxLJC7dYC9g887/XGBwjUUiZnPj7eMR8/3vr7t1yO47jF6svf+s9Y/fiUik+P+h6qL4966qPfHvXfmfjl+HKL1KdnfY/U52c9c+Csz/qvSH171iOX3b+LLnPZXc/6PVCfzvoeqM9nPXHRL2c9cdauZz3xldvOeuIrd7yMj1+a+m14/drU78PrU1Pfh9fnpj7+C5+tL019/HGzNvXxx022vjX18Yfd0apVv3T1W6n6tavfS9Wnrr6Xqs9dffRtpnJ96eqjb7GV62tXH32DV0/Vt64++qeVes360VNXV1dXV1f/BvWti9f6baOeqq9dvdb/cZXrS1ev9dwmW6/8rDJbr/x8vvJ7mcrv4yq/hw2/AV+berXZg6Wpj5/6qDxvk510yk55ZSfcstN94cnG13GTmOp8HTeJidbsNG92kjk7xZ2dYM9O74c3F7JbG9mNley2TnZTKbylld1Qy27nhTcTs1uZ2Y1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+G38AlPd71BlNunQAAAAASUVORK5CYII=" alt="">
-        </div>
-    </div>`;
-    try{
-        const user_data = decodeJwt(response.credential);
-        console.log(JSON.stringify(user_data))
-        if (user_data.hd != "kgi.ed.jp"){
-            throw new Error("not_kgi_account");
-        }
-        const user_info = {
-            name: user_data.name,
-            picture: user_data.picture,
-            grade: get_grade(user_data.email),
-        }
-        fetch(endpoint, {method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(user_info) })
-            .then(response => {
-                console.log("Response status:", response.status);
-                return response.json();
-            })
-            .then(data => {
-                if (data.success){
-                    window.location.assign(`sub_page/success.html?user=${encode(JSON.stringify(user_info))}&result=${encode(JSON.stringify(data))}`);
-                }
-                else{
-                    window.location.assign(`sub_page/error.html?type=${encode(data.message)}`);
-                }
-            })
-            .catch(error => {
-                window.location.assign(`sub_page/error.html?type=${encode(error)}`);
-            });
-    }
-    catch (e) {
-        window.location.assign(`sub_page/error.html?type=${encode(e.message)}`);
-    }
+function login(){
+    const clientId = '307579407449-16s6peb743oooe462hrp66h1rbrtedp6.apps.googleusercontent.com';
+    const redirectUri = 'http://127.0.0.1:5501/sub_page/load.html';
+    const scope = 'openid email profile';
+    const state = Math.random().toString(36).substring(2);
+
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth` +
+    `?client_id=${encodeURIComponent(clientId)}` +
+    `&redirect_uri=${encodeURIComponent(redirectUri)}` +
+    `&response_type=code` +
+    `&scope=${encodeURIComponent(scope)}` +
+    `&state=${encodeURIComponent(state)}` +
+    `&prompt=consent`;
+
+    // Googleの認証画面へリダイレクト
+    window.location.href = authUrl;
 }
+
+document.getElementById("signin_button").addEventListener("click", login)
 
 function encode(data){
     return btoa(encodeURIComponent(data))
