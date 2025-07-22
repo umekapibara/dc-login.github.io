@@ -4,27 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デジクリ出席ページ</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/animation.css">
 </head>
 <body>
-    <div id="g_id_onload"
-        data-client_id="307579407449-16s6peb743oooe462hrp66h1rbrtedp6.apps.googleusercontent.com"
-        data-callback="handleCredentialResponse"
-        data-auto_prompt="true">
-    </div>
-
     <div class="login_box_outer">
         <div class="login_box">
             <h2>Googleアカウントでログイン</h2>
 
-            <div class="g_id_signin"
-                data-type="standard"
-                data-shape="rectangular"
-                data-theme="outline"
-                data-text="signin_with"
-                data-size="large">
+            <div class="signin_box" id="signin_button">
+                <div class="signin_box_inner">
+                    <img src="https://www.gstatic.com/marketing-cms/assets/images/d5/dc/cfe9ce8b4425b410b49b7f2dd3f3/g.webp=s48-fcrop64=1,00000000ffffffff-rw" id="google_logo">
+                    <span>Googleでログイン</span>
+                </div>
             </div>
         </div>
     </div>
