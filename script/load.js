@@ -15,7 +15,7 @@ function onload(){
             code,
             client_id: "307579407449-16s6peb743oooe462hrp66h1rbrtedp6.apps.googleusercontent.com",
             client_secret: "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",
-            redirect_uri: "http://127.0.0.1:5501/sub_page/load.html",
+            redirect_uri: "https://umekapibara.github.io/dc-login.github.io/sub_page/load.html",
             grant_type: "authorization_code"
         })
 
