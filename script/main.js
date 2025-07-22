@@ -63,6 +63,7 @@ function handleCredentialResponse(response) {
     </div>`;
     try{
         const user_data = decodeJwt(response.credential);
+        console.log(JSON.stringify(user_data))
         if (user_data.hd != "kgi.ed.jp"){
             throw new Error("not_kgi_account");
         }
